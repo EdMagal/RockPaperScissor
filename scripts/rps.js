@@ -26,15 +26,15 @@ function playRound(playerSelection, computerSelection) {
 
   // Runs when the player has won the round.
   } else if (
-    playerSelection === "Rock" && computerSelection === "Scissors" ||
-    playerSelection === "Paper" && computerSelection === "Rock" ||
-    playerSelection === "Scissors" && computerSelection === "Paper") {
+    playerSelection === "Rock"     && computerSelection === "Scissors" ||
+    playerSelection === "Paper"    && computerSelection === "Rock"     ||
+    playerSelection === "Scissors" && computerSelection === "Paper"      ) {
     SCORE[0]++;
     return `You win! ${playerSelection} beats ${computerSelection}! Score: ${SCORE[0]}-${SCORE[1]}`;
 	  
   // Runs when the computer has won the round.
   } else {
-  	SCORE[1]++;
+    SCORE[1]++;
     return `You lose! ${computerSelection} beats ${playerSelection}! Score: ${SCORE[0]}-${SCORE[1]}`;
   }
 }
